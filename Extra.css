@@ -365,3 +365,438 @@ textarea {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inset shadow inside the element */
 }
 
+/* 
+  18. Advanced Flexbox Layouts 
+  -----------------------------
+  This section explores more complex usage of flexbox properties.
+*/
+
+/* Align items along the cross-axis (vertical axis in row layout) */
+.flex-alignment {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around items */
+    align-items: flex-start; /* Aligns items to the top */
+    height: 300px;
+    background-color: #f4f4f4;
+}
+
+.flex-item {
+    background-color: #ff5722;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* Nested Flexbox: Flex items inside a flex container */
+.flex-nested-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-nested-item {
+    background-color: #4CAF50;
+    width: 45%;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Align items in a column layout */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Evenly distributes items */
+    height: 300px;
+    background-color: #9c27b0;
+}
+
+/* 
+  19. Advanced Grid Layout
+  -------------------------
+  Advanced usage of CSS grid layout, covering auto-fill, auto-rows, and more complex grid configurations.
+*/
+
+.grid-advanced {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: 100px auto 100px; /* 3 rows with varying heights */
+    gap: 20px;
+}
+
+.grid-item-advanced {
+    background-color: #009688;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+}
+
+/* Auto-fill: Automatically fills available space with grid items */
+.grid-auto-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-fill columns based on available space */
+    gap: 10px;
+}
+
+/* 
+  20. CSS Variables: Advanced Use
+  ------------------------------
+  Advanced usage of custom properties for more dynamic styling.
+*/
+
+:root {
+    --main-bg-color: #ffeb3b;
+    --button-bg-color: #6200ea;
+    --hover-bg-color: #ff5722;
+    --primary-font: 'Arial', sans-serif;
+}
+
+/* Example using CSS variables */
+.dynamic-theme {
+    background-color: var(--main-bg-color);
+    font-family: var(--primary-font);
+}
+
+.dynamic-button {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dynamic-button:hover {
+    background-color: var(--hover-bg-color); /* Changes the background on hover */
+}
+
+/* 
+  21. Custom Scrollbars
+  -----------------------
+  Styling custom scrollbars for webkit browsers (Chrome, Safari).
+*/
+
+.custom-scrollbar {
+    width: 100%;
+    height: 200px;
+    overflow: scroll; /* Enables scrolling */
+    background-color: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px; /* Custom scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Changes color on hover */
+}
+
+/* 
+  22. CSS Clipping Paths
+  -----------------------
+  Clipping paths allow you to visually "clip" the content of an element.
+*/
+
+.clip-path-example {
+    width: 200px;
+    height: 200px;
+    background-color: #009688;
+    clip-path: circle(50% at 50% 50%); /* Circular clip path */
+}
+
+.clip-hexagon {
+    width: 200px;
+    height: 200px;
+    background-color: #f44336;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal shape */
+}
+
+/* 
+  23. Responsive Typography
+  --------------------------
+  This section demonstrates responsive typography using viewport units and media queries.
+*/
+
+.responsive-text {
+    font-size: 5vw; /* Font size is 5% of the viewport width */
+    line-height: 1.4;
+}
+
+.responsive-header {
+    font-size: clamp(1rem, 10vw, 4rem); /* Responsive font size with minimum and maximum limits */
+}
+
+/* 
+  24. Image Styling and Optimization
+  ----------------------------------
+  Advanced image handling techniques including responsive images and art direction.
+*/
+
+/* Responsive images */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Art direction with CSS */
+.picture {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Crops the image while maintaining aspect ratio */
+    object-position: center; /* Centers the image */
+}
+
+.picture-frame {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* 
+  25. Responsive Layouts with Flexbox
+  -----------------------------------
+  This section demonstrates creating responsive layouts with flexbox.
+*/
+
+.responsive-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    justify-content: space-between;
+}
+
+.responsive-flex-item {
+    background-color: #607d8b;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .responsive-flex-item {
+        width: 48%; /* Reduces width to fit two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-flex-item {
+        width: 100%; /* Stacks items on top of each other */
+    }
+}
+
+/* 
+  26. Transitions and Timing Functions
+  ------------------------------------
+  Fine-tuning transitions using timing functions and delays.
+*/
+
+/* Transition with a custom timing function */
+.transition-example {
+    width: 200px;
+    height: 200px;
+    background-color: #ff4081;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Custom ease-in-out curve */
+}
+
+.transition-example:hover {
+    transform: rotate(45deg); /* Rotate the element on hover */
+}
+
+/* Transition with delay */
+.transition-delay {
+    width: 150px;
+    height: 150px;
+    background-color: #2196f3;
+    transition: background-color 1s ease-in-out, transform 1s ease;
+    margin-top: 50px;
+}
+
+.transition-delay:hover {
+    background-color: #f44336;
+    transform: scale(1.2);
+}
+
+/* 
+  27. Animations with Keyframes
+  -----------------------------
+  More examples of animations using CSS keyframes.
+*/
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.bounce {
+    animation: bounce 1s infinite; /* Apply bounce animation infinitely */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* 
+  28. Z-Index and Layering
+  ------------------------
+  Layering elements using `z-index` and controlling stacking order.
+*/
+
+.zindex-layer {
+    position: relative;
+    z-index: 1; /* Default stacking order */
+    background-color: #9e9e9e;
+    width: 200px;
+    height: 200px;
+}
+
+.zindex-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; /* Stacks on top */
+    background-color: #ff9800;
+    width: 150px;
+    height: 150px;
+}
+
+/* 
+  29. CSS Grid Alignment
+  -----------------------
+  Aligning content inside a CSS grid container.
+*/
+
+.grid-align {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    justify-items: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.grid-item-align {
+    background-color: #3f51b5;
+    color: white;
+    height: 100px;
+    width: 100px;
+}
+
+/* 
+  30. CSS Filters
+  ---------------
+  Apply visual effects like blur, brightness, and contrast to elements.
+*/
+
+.filter-blur {
+    width: 300px;
+    height: 300px;
+    background-color: #8bc34a;
+    filter: blur(5px); /* Applies a blur effect */
+}
+
+.filter-brightness {
+    width: 300px;
+    height: 300px;
+    background-color: #ffeb3b;
+    filter: brightness(0.5); /* Reduces brightness */
+}
+
+.filter-contrast {
+    width: 300px;
+    height: 300px;
+    background-color: #9e9e9e;
+    filter: contrast(150%); /* Increases contrast */
+}
+
+/* 
+  31. Accessibility with Focus Styles
+  -----------------------------------
+  Enhancing focus styles for better accessibility.
+*/
+
+.focus-style:focus {
+    outline: 2px solid #ff5722; /* Custom focus outline */
+    outline-offset: 4px; /* Offsets outline for better visibility */
+}
+
+.focus-style:focus-visible {
+    outline: 2px dashed #4caf50; /* Dashed outline for keyboard users */
+}
+
+/* 
+  32. Multi-Column Layout
+  ------------------------
+  Create multi-column text layouts for better readability.
+*/
+
+.multi-column {
+    column-count: 3; /* Creates a 3-column layout */
+    column-gap: 20px; /* Space between columns */
+    text-align: justify; /* Justifies text within the columns */
+    line-height: 1.6;
+}
+
+/* 
+  33. Clipping and Masking
+  ------------------------
+  Masking an element with an image or color.
+*/
+
+.mask-image {
+    width: 100%;
+    height: 300px;
+    background-color: #3f51b5;
+    mask-image: url('https://www.example.com/mask.png'); /* Mask using an image */
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.mask-gradient {
+    width: 100%;
+    height: 300px;
+    background-color: #673ab7;
+    mask-image: linear-gradient(to right, transparent, black); /* Gradient mask */
+}
+
+/* 
+  34. Responsive Media Queries
+  ---------------------------
+  Fine-tuning the design for various devices.
+*/
+
+@media (max-width: 1200px) {
+    .responsive-flex-item {
+        width: 22%; /* Reduces item width for large screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .responsive-text {
+        font-size: 3vw; /* Responsive text size */
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-flex-item {
+        width: 100%; /* Stacks items on small screens */
+    }
+}
