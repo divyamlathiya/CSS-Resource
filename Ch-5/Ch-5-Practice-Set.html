@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch-5 Practice-Set CSS</title>
+
+    <!-- 1 - Create a responsive navbar using relative lengths. -->
+    <!-- 2 - Create a sticky navbar using position property. -->
+    <!-- 3 - Demonstrat the use of list-style property using UL as example -->
+    <!-- 4 - Demonstrat the use of z-index using an example. -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*PS-2*/
+        header {
+            position: sticky;
+            top: 0;
+            background-color: darkred;
+        }
+
+        /*This is not working but que. solved by only use header element    */
+        /* header nav {
+            width: 100%;
+            background-color: darkred;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        } */
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            font-size: 1.5vw;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box1 {
+            background-color: peru;
+            padding: 40px;
+            margin: 600px;
+
+            /*PS-4*/
+            /*Box1 is chadi jashe on the navbar because box1's z-index in greater than navbar.*/
+            position: relative;
+            z-index: 5;
+            /* Try both index and see what is differ. */
+            /* z-index: -1; */
+        }
+
+        /*PS-3*/
+        .lst-styl {
+            /* Shorthand list-style */
+            list-style: square outside url("/Ch-2/domo.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Abouts us</a></li>
+                <li><a href="#">Our work</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, culpa velit autem esse aspernatur eos
+            praesentium officiis labore architecto incidunt soluta nesciunt. Sequi blanditiis est tempore quisquam sunt
+            adipisci veritatis.
+        </div>
+    </div>
+
+    <div class="lst-styl">
+        <li>Appel</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+
+    <!-- Here, under the style tag we describe size in multiple forms like, px, em, rem, vh-vw. -->
+    <style>
+        .container {
+            font-size: 34px;
+        }
+
+        .box1 {
+            /* Pixel */
+            /* font-size: 12px; */
+
+            /*Parent element*/
+            /* font: 3em; */
+
+            /*Root parent element*/
+            /* font-size: 5rem; */
+            background-color: peru;
+        }
+
+        .box2 {
+            background-color: darkred;
+            width: 300px;
+
+            /*vh-ViewHeighgt: 50vh, It gaves 50% height and width of a total height*/
+            /*vw-ViewWidth: 50vw, It gaves 50% width and width of a total width*/
+            /*vh and vw is best for resposive website*/
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>This is paragraph.</p>
+        <div class="box1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, cum quis. Deserunt reiciendis dolor,
+            voluptas adipisci porro rerum corrupti vel perferendis dicta aspernatur cum, blanditiis asperiores, quia
+            tenetur neque deleniti?
+        </div>
+        <div class="box2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius inventore commodi ipsam.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS-2 CSS</title>
+
+    <!-- 2 - Create the same progress bar as PS-1, with using transtion. -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 70px;
+            background-color: teal;
+        }
+
+        .box1 {
+            height: 2px;
+            width: 50px;
+            background-color: red;
+
+            /* All below property explain in CH-8 => csstransition. */
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 0.5s;
+        }
+
+        .box1:hover {
+            width: 99vw;
+        }
+
+        .btn {
+            height: 50px;
+            width: 150px;
+            background: darkred;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding-left: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            Progress Bar -->
+        </div>
+    </div>
+    <header></header>
+    <div class="btn">Click this button to View progress bar</div>
+
+    <!-- JS is from ai(ChatGPT). -->
+    <script>
+        const box1 = document.querySelector('.box1');
+        const btn = document.querySelector('.btn');
+
+        // Set up the event listener for the button
+        btn.addEventListener("click", () => {
+            if (box1.style.width === '50px' || box1.style.width === '') {  // Check for initial width or empty string
+                box1.style.width = '99vw';
+            }
+            else if (box1.style.width === '99vw') {
+                box1.style.width = '50px';  // Reset to the initial width
+            }
+        });
+    </script>
+</body>
+
+</html>

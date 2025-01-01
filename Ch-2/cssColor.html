@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors in CSS</title>
+
+    <!-- Here, under the style tag we describe color in multiple forms like, RGB, HEX, HSL, HWB -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .red {
+            /* RGB color picker*/
+            background-color: rgb(209, 11, 11);
+
+            height: 100px;
+
+            /* HEX color code */
+            color: #1ab1b1;
+        }
+
+        .green {
+            /* HSL color picker */
+            background-color: hsl(120, 100%, 25%);
+
+            /* HWB color picker */
+            color: hwb(0 100% 0%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatem sapiente impedit rerum magnam esse!
+        Facilis ratione illum corrupti vitae voluptate, exercitationem, fugiat omnis necessitatibus iusto eligendi,
+        laborum iste maxime.
+    </div>
+    <div class="green">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque voluptas natus labore omnis rem temporibus
+        similique quidem blanditiis sed modi, iusto qui placeat repudiandae enim consequuntur? Quidem, nemo
+        exercitationem!
+    </div>
+</body>
+
+</html>

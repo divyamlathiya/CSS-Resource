@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: teal;
+        }
+
+        .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: darkred;
+            color: white;
+
+            /* display:flex, and content is center with horizontaly and verticaly. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Animation name that you write in keyframe */
+            animation-name: widthAnimate1;
+
+            /* Animation-duration: animation complete in given time. */
+            animation-duration: 3s;
+
+            /* About timing function check on MDN Reference. */
+            animation-timing-function: ease-in;
+
+            /* Animation-delay: animation have delay in given time. */
+            animation-delay: 1s;
+
+            /* Animation-count: does animation with given time, If enterd count is: 3 than it iterate 3 times. */
+            /* Also set infinite, it animate in infinite time. */
+            /* animation-iteration-count: 3; */
+            animation-iteration-count: infinite;
+
+            /* It's used to set direction of animation, like where to where. */
+            /* Check with different property and watch what differance apply. */
+            animation-direction: normal;
+
+            /* Short-hand property for using animation property. */
+            /* animation: widthAnimate 3s ease-in 1s infinite normal; */
+        }
+
+        img {
+            animation: widthAnimate2 3s ease-in 1s infinite normal;
+        }
+
+        /* It's used to apply animation */
+        @keyframes widthAnimate1 {
+            from {
+                width: 50px;
+                height: 50px;
+            }
+
+            to {
+                width: 50vw;
+                height: 25vh;
+            }
+        }
+
+        /* It's used to apply animation. */
+        @keyframes widthAnimate2 {
+
+            /* at 0% height and width display like this */
+            0% {
+                width: 50px;
+                height: 50px;
+            }
+
+            /* When animation complete/at 20% than height and width display like this */
+            20% {
+                width: 180px;
+                height: 150px;
+            }
+
+            /* When animation complete 100% than height and width display like this */
+            100% {
+                width: 50vw;
+                height: 25vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            This is Box-1.
+        </div>
+        <img src="/Ch-6-Practice-Set/images/bg-4.jpg" alt="">
+    </div>
+</body>
+
+</html>

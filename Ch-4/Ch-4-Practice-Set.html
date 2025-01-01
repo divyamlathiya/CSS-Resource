@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch-4 Practice-Set CSS</title>
+    <!-- Importing google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Baloo+Bhai+2:wght@400..800&display=swap"
+        rel="stylesheet">
+
+    <!-- 1 - Create a website which has black navbar, and two box green and red in left-right. -->
+    <!-- 2 - Add footer with google fonts Baloo Bhai 2 to 1. -->
+    <!-- 3 - Remove underlines from links in 1. -->
+    <!-- 4 - Demonstrat the diffenrence between display:none and visibility:hidden using div -->
+    <!-- 5 - Change footer to all uppercase. -->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav {
+            background-color: black;
+            color: white;
+        }
+
+        /*PS-3*/
+        nav ul li a {
+
+            /*PS-3*/
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 15px;
+        }
+
+        .box1 {
+            height: 80vh;
+            width: 50vw;
+            background-color: red;
+            color: white;
+            display: inline-block;
+
+            /*PS-4*/
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .box2 {
+            height: 80vh;
+            width: 50vw;
+            background-color: green;
+            color: white;
+            display: inline-block;
+        }
+
+        /*PS-2*/
+        .expl {
+            background-color: peru;
+            color: black;
+            text-align: center;
+            font-family: 'Baloo Bhai 2', sans-serif;
+
+            /*PS-5*/
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our work</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+        </div>
+    </main>
+
+    <!-- PS-2 -->
+    <footer>
+        <p class="expl">
+            &copy; 1999-2024 by Refsnes Data. All Rights Reserved. HTML is Decoret by CSS.
+        </p>
+    </footer>
+</body>
+
+</html>

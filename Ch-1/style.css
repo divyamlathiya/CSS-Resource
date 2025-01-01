@@ -1,0 +1,17 @@
+#first {
+    background-color: aqua;
+}
+
+#second {
+    background-color: seagreen;
+}
+
+.red {
+    background-color: red;
+}
+
+.red bg-blue border-purple {
+    color: red;
+    background-color: blue;
+    border: 2px solid purple;
+}

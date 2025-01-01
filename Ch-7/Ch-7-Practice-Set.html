@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch-7 Practice-Set CSS</title>
+
+    <!-- 1 - Create header using CSS grid. -->
+    <!-- 2 - Create layout that created in ch-6 practice set/ PS-1, using grid. -->
+    <!-- 3 - Create webpage that chnage color on width like, large on green, medium on red and small on yellow. -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: grid;
+            display: flex;
+            height: 70px;
+            background-color: teal;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 45px;
+            width: 45px;
+            padding: 10px 25px 0px 25px;
+        }
+
+        nav ul li {
+            display: inline-grid;
+            list-style: none;
+            grid-gap: 15px;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            display: inline-grid;
+            grid-column-gap: 140px;
+            grid-template-columns: auto auto;
+            /* justify-content: space-between; */
+        }
+
+        .box1 {
+            height: 600px;
+            width: 700px;
+            background-color: peru;
+        }
+
+        .box2 {
+            height: 600px;
+            width: 700px;
+            background-color: brown;
+        }
+
+        @media screen and (max-width: 900px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            body {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Ch-6-Practice-Set/images/logo-img.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our work</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+    </div>
+</body>
+
+</html>

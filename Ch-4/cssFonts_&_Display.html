@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts & Display in CSS</title>
+    <style>
+        .box1 {
+            height: 250px;
+            width: 250px;
+            background-color: darkred;
+            display: inline;
+
+            /* Display the content in inline, but you can not set height and width. */
+            /* For set height and width you should use inline-block property.*/
+            /* display: block; */
+            /* display: inline-block; */
+
+            /* Display content hidden or visibility none* /
+            /* display: none --> remove the content and visibility: hidden --> hide the content. */
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+
+        .box2 {
+            height: 250px;
+            width: 250px;
+            background-color: peru;
+
+            /*Display content: inline-block, and you can also set height and width here.*/
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quae cupiditate reiciendis voluptates quo est
+        laudantium dolorum saepe quis quibusdam, in perferendis libero accusamus explicabo consequuntur voluptate, nam
+        sit provident.
+    </div>
+    <div class="box2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sed beatae id reiciendis distinctio vitae labore
+        saepe sapiente voluptatem accusantium.
+    </div>
+</body>
+
+</html>

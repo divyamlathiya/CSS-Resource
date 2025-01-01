@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS-4 CSS</title>
+
+    <!-- 4 - Create a slider with 3 images using CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: peru;
+        }
+
+        header {
+            height: 70px;
+            background-color: black;
+        }
+
+        .prgbar {
+            height: 2px;
+            width: 50px;
+            background-color: red;
+            animation-name: progressbar;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+        }
+
+        .slider {
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider img {
+            display: block;
+            margin: auto;
+        }
+
+        .img1 {
+            /* 72 */
+            transform: translate(-14vw);
+            animation: slide1 3s 1s forwards infinite;
+        }
+
+        .img2 {
+            /* 86 */
+            transform: translate(0vw);
+            animation: slide2 3s 1s forwards infinite;
+        }
+
+        .img3 {
+            transform: translate(14vw);
+            animation: slide2 1s 1s forwards;
+        }
+
+        /* This applied animation is for progress bar. */
+        @keyframes progressbar {
+            from {
+                width: 20px;
+            }
+
+            to {
+                width: 95vw;
+            }
+        }
+
+        @keyframes slide1 {
+            from {
+                transform: translate(-8vw);
+            }
+
+            to {
+                transform: translate(72vw);
+            }
+        }
+
+        @keyframes slide2 {
+            from {
+                transform: translate(0vw);
+            }
+
+            to {
+                transform: translate(86vw);
+            }
+        }
+
+        @keyframes slide3 {
+            from {
+                transform: translate(0vw);
+            }
+
+            to {
+                transform: translate(86vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prgbar"></div>
+    <header></header>
+    <main>
+        <div class="slider">
+            <img class="img1" src="/Ch-8-Practice-Set/images/slider-img1.jpg" alt="slider-img1">
+            <img class="img2" src="/Ch-8-Practice-Set/images/slider-img2.jpg" alt="slider-img2">
+            <img class="img3" src="/Ch-8-Practice-Set/images/slider-img3.jpg" alt="slider-img3">
+        </div>
+    </main>
+</body>
+
+</html>

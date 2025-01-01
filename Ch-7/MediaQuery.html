@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries in CSS</title>
+    <style>
+        .container {
+            height: 45vh;
+            width: 70vw;
+            background: darkred;
+            color: white;
+        }
+
+        /* This is media query, It's use to set that when display is this content is this. */
+        /* Below work as, when display size is 800px then bg-color is peruu. */
+        @media screen and (max-width: 800px) {
+            body {
+                background-color: peru;
+            }
+
+            .container {
+                background-color: cadetblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, beatae delectus? Explicabo laborum commodi
+        blanditiis est facere nobis illum dolor quos in id sed cumque totam praesentium reprehenderit, delectus ea, cum
+        itaque corrupti placeat enim nam? Officia molestiae aperiam blanditiis voluptatibus, nemo ullam magnam earum,
+        unde assumenda esse illum. Corporis totam quisquam eum, quos autem ratione fuga ab incidunt quibusdam maiores
+        quas reprehenderit hic nesciunt odio inventore voluptas ducimus similique nisi error amet eaque reiciendis
+        voluptates animi quam. Eos doloribus similique nostrum earum quaerat, dolorum repudiandae eius accusantium quae
+        reprehenderit.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: peru;
+        }
+
+        .container .box1-img img {
+            height: 350px;
+            width: 350px;
+            border: 2px solid black;
+
+            /* It's used to set that, transform is begin with which point. */
+            /* transform-origin: 0; */
+
+            /* It moves an element along X or Y axis without changing size. */
+            /* 1st calue is for horizontal and 2nd value is for vertical */
+            /* Asign value in px, %, deg, ch, mm, etc.*/
+            transform: translate(150px, 50%);
+
+            /* It's used to scale the content*/
+            /* 1st value is for horizontal scale and 2nd value is for vertical scale. */
+            /*Asign value in px, %, etc.*/
+            /* transform: scaleX(2); */
+            /* transform: scaleY(0.5); */
+            /* This is like shorthand for scale-x and scale-y */
+            /* transform:s scale(2, 0.5); */
+
+            /* It's used to rotate content* /
+            /* Asign value in deg, turn, etc.*/
+            /* transform: rotate(5deg); */
+            /* transform: rotateX(100deg); */
+            /* transform: rotateY(100deg); */
+
+            /* It is used to skew the content. */
+            /* transform: skew(30deg, 20deg); */
+
+            /* It is short-hand property of above described properties. */
+            /* It sets: scaleX(), skewy(), skewx(), scaley(), translatex(), translatey(). */
+            /* transform: matrix(1, 2, 3, 4, 5, 6); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1-img">
+            <img src="/Ch-6-Practice-Set/images/bg-4.jpg" alt="box1-img">
+        </div>
+    </div>
+</body>
+
+</html>

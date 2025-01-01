@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: peachpuff;
+            height: 100vh;
+        }
+
+        .container .box1-img img {
+            height: 250px;
+            width: 250px;
+
+            /* These are the transition peoperty */
+
+            /* transition-property: It means what would you tansist like height, width, margin, etc. */
+            transition-property: width height;
+
+            /* transition-delay: It means duration of the transition should be done/complete. */
+            transition-duration: 2s;
+
+            /* About timing function check on MDN Reference. */
+            transition-timing-function: ease-in-out;
+
+            /* transition-delay: It means transition start after the given time. like transition-delay: 1s -> it start transist after 1 second. */
+            transition-delay: 1s;
+
+            /* Short-hand transition property. */
+            /* 1st: property, 2nd: duration, 3rd: timing-function, 4th: delay. */
+            /* Set multiple properties in shorthand */
+            /* transition: width 3s ease-in-out, height 2s ease-in; */
+        }
+
+        /* .box1-img img:hover {
+            height: 200px;
+            width: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1-img">
+            <img id="myImage" src="/Ch-6-Practice-Set/images/bg-4.jpg" alt="box1-img">
+            <button id="btn">Transition</button>
+        </div>
+    </div>
+
+    <!-- JS is from external source, not written by own. -->
+    <!-- Only few changes made by own. -->
+    <script>
+        myImage.style.width = '250px'
+        myImage.style.height = '250px'
+
+        btn.addEventListener("click", () => {
+            // myImage.style.height = '400px'
+            if (myImage.style.width === '500px') {
+                myImage.style.width = '250px';
+
+            }
+            else if (myImage.style.width === '250px') {
+                myImage.style.width = '500px';
+
+            }
+        })
+
+
+        btn.addEventListener("click", () => {
+            // myImage.style.height = '400px'
+            if (myImage.style.height === '400px') {
+                myImage.style.height = '250px';
+
+            }
+            else if (myImage.style.height === '250px') {
+                myImage.style.height = '400px';
+
+            }
+        })
+
+        /* It's also working, but this is from chat GPT and upper is from mind concepts. */
+        // myImage.style.height = '400px'
+        //         btn.addEventListener("click", () => {
+        //         if (myImage.style.width === '250px') {
+        //         myImage.style.width = '500px';
+        //         myImage.style.height = '400px';
+
+        //     }
+        //     else if (myImage.style.width === '500px') {
+        //         myImage.style.height = '250px';
+        //         myImage.style.width ='250px';
+
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

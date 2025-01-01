@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin collapes in CSS</title>
+
+    <!-- Margin-collaes : Two box, box-1 has 50margin and box-2 has 40margin than marginCollapes concept is implement,
+        box-1 & box-2's margin share the margin in place of both box have 50px-40px margin it's called.. -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            background-color: darkred;
+            height: 350px;
+            width: 350px;
+            margin: 20px;
+            border: 5px solid black;
+        }
+
+        .box2 {
+            background-color: peru;
+            height: 50px;
+            width: 100%;
+            margin: 20px;
+            border: 5px solid yellow;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto labore voluptatem laudantium dolor nemo dolores
+        magnam minus maxime? Dolores tempore facere sequi mollitia. Ut inventore deserunt ad similique at porro!
+
+        <div class="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis esse minus optio possimus molestiae
+            obcaecati in nulla, voluptatibus consequatur debitis quaerat tenetur nihil ullam, dolores sequi minima
+            temporibus magni deserunt?
+        </div>
+    </div>
+</body>
+
+</html>

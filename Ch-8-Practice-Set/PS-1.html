@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS-1 CSS</title>
+
+    <!-- 1 - Create a thin progress bar animation for a website. using animation -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 70px;
+            background-color: teal;
+        }
+
+        .box1 {
+            height: 2px;
+            width: 50px;
+            background-color: red;
+
+            /*All below property is explain in Ch-8 => cssAnimation.*/
+            animation-name: prgbar;
+            animation-duration: 5s;
+            animation-timing-function: ease-in;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+
+        @keyframes prgbar {
+            from {
+                width: 10px;
+            }
+
+            to {
+                width: 99vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            Progress Bar -->
+        </div>
+    </div>
+    <header></header>
+</body>
+
+</html>

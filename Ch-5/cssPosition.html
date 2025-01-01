@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position in CSS</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        nav ul li {
+            /* Display content inline, but you can not set height and width. */
+            /* For set height and width you should usse inline-block property.*/
+            display: inline;
+        }
+
+        ul li a {
+            /* Display content inline-block and you can also set height and width here. */
+            display: inline-block;
+            margin: 15px;
+        }
+
+        header nav {
+            background-color: peru;
+            color: peachpuff;
+            height: 70px;
+        }
+
+        .container {
+            background-color: darkred;
+            color: white;
+            height: 50vh;
+            width: 50vh;
+            margin: auto;
+        }
+
+        .container p {
+
+            /* It align the text under the box/container/div etc. */
+            /* It's use to set text in center. */
+            text-align: center;
+            border: 5px solid black;
+        }
+
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background-color: chocolate;
+
+            /* position: relative;
+            top: 10px;
+            left: 300px;  */
+            position: absolute;
+        }
+
+        .box2 {
+            height: 200px;
+            width: 200px;
+            background-color: firebrick;
+        }
+
+        footer ul li {
+            /* It's used to style an list, */
+            /* We write appel under <li> and apply square in list-style so it appear with => (square)apple */
+            list-style: square;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium in temporibus nobis, reprehenderit
+            error sapiente fugit? Architecto accusamus repudiandae, numquam repellat dicta eos eligendi voluptatum harum
+            optio eveniet. Praesentium, aliquid.
+        </p>
+        <div class="box1">
+            I am a box.
+        </div>
+        <div class="box2">
+            Lorem, ipsum dolor.
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>Appel</li>
+            <li>Banana</li>
+            <li>Orange</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

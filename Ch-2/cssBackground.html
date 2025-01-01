@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 355px;
+            height: 1355px;
+            border: 2px solid green;
+
+            /* It used to set background-color. */
+            background-color: peru;
+
+            /*It's used to set image in background*/
+            background-image: url("/Ch-2/domo.jpg");
+
+            /*It decide that bg image is repeat or not.*/
+            background-repeat: no-repeat;
+
+            /* background-size: 63px 45px; */
+            background-size: contain;
+            color: white;
+
+            /*Background attachment is fixed, not moved*/
+            background-attachment: scroll;
+
+            /*Position hold on top*/
+            background-position: top right;
+
+            /*Short-hand background property.*/
+            /* background: peru url("domo.jpg") no-repeat scroll top right; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, id? Ad, consequatur deserunt!
+        Voluptatibus incidunt amet sed aspernatur, repudiandae quaerat enim, tempore culpa numquam, sequi consequatur
+        officia ex dolore vero!
+    </div>
+</body>
+
+</html>
