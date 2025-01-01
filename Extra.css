@@ -800,3 +800,514 @@ textarea {
         width: 100%; /* Stacks items on small screens */
     }
 }
+
+/*
+    35. Advanced Box Model Techniques
+    -------------------------------
+    In-depth exploration of the box model, padding, margin, and border manipulation.
+*/
+
+/* The default box model behavior is 'content-box', but 'border-box' includes padding and border in the element's width and height */
+.box-model-example {
+    box-sizing: border-box; /* Includes padding and border in element's width and height */
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #3f51b5;
+    margin: 15px;
+}
+
+/* A box with 'content-box' box-sizing (default behavior) */
+.box-model-content {
+    box-sizing: content-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #ff9800;
+    margin: 15px;
+}
+
+/* The box model with padding adjustments */
+.padding-adjustment {
+    width: 100%;
+    padding: 50px;
+    background-color: #9e9e9e;
+}
+
+/* Using negative margins to pull content in */
+.margin-negative {
+    margin-left: -20px;
+    margin-top: -10px;
+    background-color: #00bcd4;
+}
+
+/* 
+    36. Background Image Techniques
+    ------------------------------
+    Exploring advanced background image techniques.
+*/
+
+/* Background image with position, repeat, and size */
+.background-image {
+    background-image: url('https://via.placeholder.com/800');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+}
+
+/* Gradient background */
+.gradient-background {
+    background: linear-gradient(45deg, #ffeb3b, #4caf50); /* Diagonal gradient */
+    height: 400px;
+}
+
+/* Radial gradient background */
+.radial-background {
+    background: radial-gradient(circle, #ff9800, #f44336); /* Circular gradient */
+    height: 400px;
+}
+
+/* Fixed background image that does not scroll with the content */
+.fixed-background {
+    background-image: url('https://via.placeholder.com/800');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+}
+
+/* Multiple background images */
+.multiple-backgrounds {
+    background-image: url('https://via.placeholder.com/800'), url('https://via.placeholder.com/400');
+    background-position: center, top right;
+    background-size: cover, contain;
+    height: 400px;
+}
+
+/* 
+    37. Shadow Effects (Box and Text Shadows)
+    ----------------------------------------
+    Creating shadow effects using `box-shadow` and `text-shadow`.
+*/
+
+/* Box shadow: Adds a shadow around the element */
+.box-shadow-example {
+    width: 200px;
+    height: 200px;
+    background-color: #8bc34a;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Horizontal, vertical, blur radius, color */
+}
+
+/* Text shadow: Adds a shadow to text */
+.text-shadow-example {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Horizontal, vertical, blur radius, color */
+}
+
+/* Multiple box shadows */
+.multiple-box-shadows {
+    width: 200px;
+    height: 200px;
+    background-color: #ff5722;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Inset box shadow (shadow inside the element) */
+.inset-box-shadow {
+    width: 200px;
+    height: 200px;
+    background-color: #2196f3;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+    38. CSS Transforms
+    -------------------
+    Moving, scaling, rotating, and skewing elements using the `transform` property.
+*/
+
+/* Translate: Moves the element on the X and Y axis */
+.translate-example {
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63;
+    transform: translate(50px, 100px); /* Moves 50px right and 100px down */
+}
+
+/* Scale: Enlarges the element */
+.scale-example {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    transform: scale(1.5); /* Scales the element 1.5 times its original size */
+}
+
+/* Rotate: Rotates the element */
+.rotate-example {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9800;
+    transform: rotate(45deg); /* Rotates the element 45 degrees */
+}
+
+/* Skew: Skews the element along the X and Y axis */
+.skew-example {
+    width: 100px;
+    height: 100px;
+    background-color: #673ab7;
+    transform: skewX(20deg); /* Skews the element along the X-axis */
+}
+
+/* Combine multiple transforms */
+.combined-transforms {
+    width: 100px;
+    height: 100px;
+    background-color: #9c27b0;
+    transform: translate(50px, 50px) scale(1.2) rotate(30deg); /* Applies translation, scaling, and rotation */
+}
+
+/* 
+    39. Aspect Ratio Control
+    -------------------------
+    Maintaining a fixed aspect ratio for an element using CSS.
+*/
+
+/* Maintain a 16:9 aspect ratio */
+.aspect-ratio-16x9 {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 9/16 ratio */
+    background-color: #00bcd4;
+}
+
+/* Maintain a square aspect ratio (1:1) */
+.aspect-ratio-square {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* 1:1 ratio */
+    background-color: #ff5722;
+}
+
+/* Maintain an aspect ratio of 4:3 */
+.aspect-ratio-4x3 {
+    width: 100%;
+    height: 0;
+    padding-top: 75%; /* 3/4 ratio */
+    background-color: #ff9800;
+}
+
+/* 
+    40. Styling Forms (Input, Button, and Textarea)
+    ----------------------------------------------
+    Styling form elements like inputs, buttons, and textareas.
+*/
+
+/* Style input fields */
+.input-field {
+    padding: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Style buttons */
+.button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3700b3;
+}
+
+/* Style textarea */
+.textarea {
+    padding: 10px;
+    border: 2px solid #f44336;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+/* 
+    41. CSS Variables: Dark Mode Toggle
+    -----------------------------------
+    Example of implementing a dark mode toggle with CSS variables.
+*/
+
+/* Default light mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --button-bg-color: #6200ea;
+}
+
+.light-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --button-bg-color: #bb86fc;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.theme-toggle-button {
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+    42. Flexbox Layout for Cards
+    ----------------------------
+    Creating a flexible card layout using flexbox.
+*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    width: 30%;
+    background-color: #607d8b;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 
+    43. Vertical and Horizontal Centering with Flexbox
+    ---------------------------------------------------
+    How to center elements both vertically and horizontally.
+*/
+
+/* Centering an element vertically and horizontally */
+.center-flex {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 300px;
+    background-color: #ff5722;
+}
+
+.centered-element {
+    width: 100px;
+    height: 100px;
+    background-color: #3f51b5;
+}
+
+/* 
+    44. Styling Lists
+    ----------------
+    Styling unordered and ordered lists.
+*/
+
+/* Unordered list with custom bullet points */
+.custom-ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Ordered list with custom numbering */
+.custom-ol {
+    list-style-type: upper-roman; /* Roman numerals */
+    margin-left: 20px;
+}
+
+/* Styling list items */
+.custom-li {
+    padding: 5px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* 
+    45. CSS Media Queries for Adaptive Design
+    -----------------------------------------
+    Using media queries to make designs responsive across various devices.
+*/
+
+/* Small screen styles */
+@media (max-width: 600px) {
+    .responsive-text {
+        font-size: 2vw; /* Smaller text on smaller screens */
+    }
+    
+    .card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Medium screen styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .responsive-text {
+        font-size: 3vw; /* Medium text size for tablet screens */
+    }
+    
+    .card-container {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+/* Large screen styles */
+@media (min-width: 1025px) {
+    .responsive-text {
+        font-size: 4vw; /* Larger text on desktop */
+    }
+    
+    .card-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* 
+    46. CSS Counters
+    ----------------
+    Using counters to style numbered elements.
+*/
+
+/* Create a counter for the list */
+.counter-example {
+    counter-reset: item; /* Reset the counter */
+}
+
+.counter-example li {
+    counter-increment: item; /* Increment the counter for each list item */
+}
+
+.counter-example li::before {
+    content: counter(item) ". "; /* Display the counter */
+    font-weight: bold;
+}
+
+/* 
+    47. Transform Origin
+    --------------------
+    Control the origin point of transforms.
+*/
+
+/* Rotate around the top left corner */
+.transform-origin-left-top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 200px;
+    height: 200px;
+    background-color: #ff5722;
+}
+
+/* Rotate around the center of the element */
+.transform-origin-center {
+    transform: rotate(45deg);
+    transform-origin: center;
+    width: 200px;
+    height: 200px;
+    background-color: #4caf50;
+}
+
+/* 
+    48. Accessibility Best Practices
+    -------------------------------
+    Improving accessibility for screen readers and keyboard navigation.
+*/
+
+/* Focus styles for accessibility */
+.accessibility-focus:focus {
+    outline: 2px dashed #f44336;
+    outline-offset: 4px;
+}
+
+/* Make sure interactive elements are visible */
+.accessibility-hidden {
+    visibility: hidden;
+}
+
+.accessibility-hidden-focus:focus {
+    visibility: visible;
+}
+
+/* 
+    49. CSS Grid Layout with Named Lines
+    -------------------------------------
+    Grid layouts using named grid lines for more control.
+*/
+
+.grid-named-lines {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-areas:
+        "header header header"
+        "content sidebar sidebar";
+}
+
+.grid-item-header {
+    grid-area: header;
+    background-color: #ff5722;
+}
+
+.grid-item-content {
+    grid-area: content;
+    background-color: #4caf50;
+}
+
+.grid-item-sidebar {
+    grid-area: sidebar;
+    background-color: #2196f3;
+}
+
+/* 
+    50. CSS Functions
+    -----------------
+    Using CSS functions like `calc()`, `min()`, `max()`, and `clamp()`.
+*/
+
+/* Using calc() to combine values */
+.calc-example {
+    width: calc(100% - 20px); /* Subtract 20px from the total width */
+    padding: 10px;
+    background-color: #9c27b0;
+}
+
+/* Using min() to set a minimum value */
+.min-example {
+    width: min(50%, 500px); /* Sets the width to 50% or 500px, whichever is smaller */
+}
+
+/* Using max() to set a maximum value */
+.max-example {
+    width: max(50%, 300px); /* Sets the width to 50% or 300px, whichever is larger */
+}
+
+/* Using clamp() for responsive sizing */
+.clamp-example {
+    font-size: clamp(16px, 5vw, 32px); /* Font size between 16px and 32px, responsive with viewport */
+}
