@@ -1,0 +1,367 @@
+/* 
+  1. General reset and basic styling for body and html elements 
+  ------------------------------------------------------------
+  A CSS reset to ensure consistent styling across browsers by removing default margins, paddings, and borders.
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; /* Ensures padding and borders don't affect width/height */
+    font-family: Arial, sans-serif; /* Sets a basic font for the document */
+    height: 100%; /* Makes the body take up the full viewport height */
+}
+
+/* 
+  2. Colors and Backgrounds 
+  --------------------------
+  This section demonstrates the use of colors, backgrounds, gradients, and opacity.
+*/
+
+.container {
+    width: 100%;
+    height: 100vh; /* 100% viewport height */
+    background-color: #f0f0f0; /* Solid light grey background */
+}
+
+.header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from left to right */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Background image */
+.background-image {
+    background-image: url('https://www.example.com/image.jpg');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    height: 400px; /* Set a fixed height */
+}
+
+/* Opacity */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white;
+    padding: 20px;
+}
+
+/* 
+  3. Text Styling
+  ----------------
+  This section covers font styling, text alignment, decoration, and transformation.
+*/
+
+.text-style {
+    font-size: 1.5rem; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    text-align: center; /* Centers text */
+    text-transform: uppercase; /* Transforms text to uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.text-decoration {
+    text-decoration: underline; /* Underlines the text */
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds shadow to the text */
+}
+
+/* 
+  4. Box Model 
+  -------------
+  This section explains the box model, padding, margin, and border usage.
+*/
+
+.box {
+    width: 200px;
+    height: 150px;
+    padding: 20px; /* Padding inside the box */
+    border: 5px solid #333; /* Border around the box */
+    margin: 10px; /* Margin outside the box */
+    background-color: lightblue;
+    box-sizing: border-box; /* Includes padding and border in width/height calculation */
+}
+
+/* 
+  5. Flexbox Layout 
+  -----------------
+  Flexbox is a layout model that allows items to align and distribute space within a container.
+*/
+
+.flex-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes items evenly, with space between them */
+    align-items: center; /* Vertically centers items */
+    height: 200px;
+    background-color: #e0e0e0;
+}
+
+.flex-item {
+    background-color: #ffcc00;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+    line-height: 100px; /* Centers text vertically */
+}
+
+/* Flex item that takes up remaining space */
+.flex-grow {
+    flex-grow: 1; /* This item will take all available space */
+    background-color: #4CAF50;
+}
+
+/* 
+  6. Grid Layout 
+  --------------
+  The grid layout system allows creating more complex and responsive layouts.
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 10px; /* Space between grid items */
+}
+
+.grid-item {
+    background-color: #ff5722;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+}
+
+/* Responsive Grid Layout */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack grid items on small screens */
+    }
+}
+
+/* 
+  7. Positioning 
+  --------------
+  This section covers different positioning methods: static, relative, absolute, and fixed.
+*/
+
+.relative-position {
+    position: relative; /* Element's position is relative to its normal position */
+    top: 20px; /* Moves element down by 20px */
+    left: 10px; /* Moves element to the right by 10px */
+}
+
+.absolute-position {
+    position: absolute; /* Element is positioned relative to its nearest positioned ancestor */
+    top: 50px;
+    right: 20px;
+}
+
+.fixed-position {
+    position: fixed; /* Element stays in the same position even when scrolling */
+    bottom: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* 
+  8. Border and Border Radius 
+  -----------------------------
+  Border properties are used to create edges around elements, and border-radius creates rounded corners.
+*/
+
+.border-example {
+    border: 2px solid #000; /* Solid black border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* 
+  9. Transitions and Animations
+  -----------------------------
+  Transitions allow smooth changes in CSS properties, while animations can trigger changes over time.
+*/
+
+/* Transition */
+.transition {
+    width: 200px;
+    height: 100px;
+    background-color: #6200ea;
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.transition:hover {
+    background-color: #ff5722; /* Changes color on hover */
+}
+
+/* Keyframe Animation */
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide {
+    animation: slide 1s ease-in-out forwards;
+}
+
+/* 
+  10. Pseudo-Classes and Pseudo-Elements
+  -------------------------------------
+  Pseudo-classes represent a state of an element, and pseudo-elements target parts of an element.
+*/
+
+/* Pseudo-class for hover */
+.button:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+/* Pseudo-element for first letter */
+.first-letter::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* Pseudo-element for before content */
+.box::before {
+    content: "Before text: "; /* Adds text before the content */
+    font-weight: bold;
+}
+
+/* 
+  11. Media Queries for Responsiveness
+  -----------------------------------
+  Media queries allow applying different styles depending on the screen size.
+*/
+
+@media screen and (max-width: 768px) {
+    .container {
+        background-color: #e0e0e0; /* Changes background color on smaller screens */
+    }
+    
+    .text-style {
+        font-size: 1rem; /* Adjusts font size for smaller screens */
+    }
+}
+
+/* 
+  12. Custom Properties (CSS Variables)
+  -------------------------------------
+  Custom properties allow defining reusable values that can be referenced throughout the CSS.
+*/
+
+:root {
+    --primary-color: #ff5722;
+    --secondary-color: #4CAF50;
+}
+
+.custom-property {
+    color: var(--primary-color); /* Uses custom property */
+    background-color: var(--secondary-color); /* Uses custom property */
+}
+
+/* 
+  13. Overflow and Scroll 
+  ------------------------
+  Control how content behaves when it overflows an element's box.
+*/
+
+.scrollable {
+    width: 300px;
+    height: 200px;
+    overflow: auto; /* Allows scrolling when content overflows */
+    background-color: #f1f1f1;
+}
+
+.no-scroll {
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* Hides overflowing content */
+    background-color: #f1f1f1;
+}
+
+/* 
+  14. Forms Styling
+  -----------------
+  Basic form elements such as input, buttons, and text areas.
+*/
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 
+  15. Custom Fonts and Google Fonts
+  ---------------------------------
+  This section covers importing custom fonts and styling with them.
+*/
+
+/* Importing a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.custom-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* 
+  16. CSS Functions
+  -----------------
+  This section demonstrates the usage of built-in CSS functions like `calc()`, `var()`, and `clamp()`.
+*/
+
+.element {
+    width: calc(100% - 20px); /* Subtracts 20px from 100% width */
+    height: 200px;
+}
+
+.responsive-font {
+    font-size: clamp(1rem, 5vw, 2rem); /* Makes font size responsive */
+}
+
+/* 
+  17. Box Shadows
+  ----------------
+  Box shadows are used to create depth and layering effects.
+*/
+
+.shadow {
+    width: 200px;
+    height: 150px;
+    background-color: #ddd;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Creates a shadow */
+}
+
+.shadow-inset {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inset shadow inside the element */
+}
+
