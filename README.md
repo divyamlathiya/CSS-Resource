@@ -147,4 +147,4 @@ Thank you for visiting the **CSS Learning Resource** repository! Whether you're 
 
 Happy learning and coding! 👨‍💻👩‍💻
 ---
-Author - **Divyam Lathiya**
+**Divyam Lathiya**
